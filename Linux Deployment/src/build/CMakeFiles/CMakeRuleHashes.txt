@@ -1,0 +1,7 @@
+# Hashes of file build rules.
+dcb40312b2b14625b51bb142ed65eef9 ../ELO-NG_de_DE.ts
+5c5c46030bd9d25ef8cb3c660420f83e CMakeFiles/ELO-NG_autogen
+c4fcb9d0eabed049e01dfdc60b69d833 CMakeFiles/ELO-NG_lrelease
+8392bc0f4a675513c011bbc691f47d0d CMakeFiles/ELO-NG_lupdate
+45d13abece69b1a86806c42313f2eaf5 ELO-NG_autogen/EWIEGA46WW/qrc_ELOResources.cpp
+e75a18592fd21cbb633a7f63862fd145 ELO-NG_de_DE.qm

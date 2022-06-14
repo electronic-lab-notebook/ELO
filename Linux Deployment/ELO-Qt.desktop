@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=ELO
+GenericName=Electronic Laboratory Notebook
+GenericName[de]=Elektronisches Laborjournal
+Comment=Das einzig wahre elektronische Laborjournal
+Exec=ELO-Qt
+Icon=/usr/share/pixmaps/ELO-Qt.svg
+Terminal=false
+Type=Application 

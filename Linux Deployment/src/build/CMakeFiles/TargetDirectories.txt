@@ -1,0 +1,12 @@
+/home/marcus/heptazin/Programme/ELO-NG/Linux Deployment/src/build/CMakeFiles/ELO-NG.dir
+/home/marcus/heptazin/Programme/ELO-NG/Linux Deployment/src/build/CMakeFiles/ELO-NG_lupdate.dir
+/home/marcus/heptazin/Programme/ELO-NG/Linux Deployment/src/build/CMakeFiles/update_translations.dir
+/home/marcus/heptazin/Programme/ELO-NG/Linux Deployment/src/build/CMakeFiles/ELO-NG_lrelease.dir
+/home/marcus/heptazin/Programme/ELO-NG/Linux Deployment/src/build/CMakeFiles/release_translations.dir
+/home/marcus/heptazin/Programme/ELO-NG/Linux Deployment/src/build/CMakeFiles/edit_cache.dir
+/home/marcus/heptazin/Programme/ELO-NG/Linux Deployment/src/build/CMakeFiles/rebuild_cache.dir
+/home/marcus/heptazin/Programme/ELO-NG/Linux Deployment/src/build/CMakeFiles/list_install_components.dir
+/home/marcus/heptazin/Programme/ELO-NG/Linux Deployment/src/build/CMakeFiles/install.dir
+/home/marcus/heptazin/Programme/ELO-NG/Linux Deployment/src/build/CMakeFiles/install/local.dir
+/home/marcus/heptazin/Programme/ELO-NG/Linux Deployment/src/build/CMakeFiles/install/strip.dir
+/home/marcus/heptazin/Programme/ELO-NG/Linux Deployment/src/build/CMakeFiles/ELO-NG_autogen.dir

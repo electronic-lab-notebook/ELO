@@ -1,0 +1,44 @@
+pkgname=ELO-Qt
+pkgver=1.46
+pkgrel=1
+pkgdesc="An electronic laboratory notebook written with Qt6 using QWebEngine"
+arch=('x86_64')
+license=('CC-BY-SA')
+depends=('qt6-base'
+         'qt6-svg'
+         'qt6-translations'
+         'qt6-webengine'
+         'qt6-imageformats'
+         'libgit2'
+         'libssh2'
+         )
+makedepends=('cmake')
+source=("ELO-NG.zip"
+        "ELO-Qt.desktop")
+sha256sums=('e9802c007ed81a476f7fc6bbabe808b5dfa81664d0256795c28c06d372685b9d'
+            'bfdfd633937ad5826a823f450041d5eadb3ed1385fe734ad84d2cd1b3fcc11a0')
+            
+build() {
+    cmake -B build -S . \
+        -DCMAKE_BUILD_TYPE='MinSizeRelease' \
+        -DCMAKE_INSTALL_PREFIX='/opt/ELO-Qt' \
+        -Wno-dev
+    cmake --build build
+}
+
+package() {
+    DESTDIR="$pkgdir" cmake --install build
+    mkdir -p "$pkgdir/opt/ELO-Qt/ckeditor5"
+    mkdir -p "$pkgdir/opt/ELO-Qt/qtwebengine_dictionaries"
+    install -Dm755 "$srcdir/build/ELO-NG" -t "$pkgdir/opt/ELO-Qt/"
+    mkdir -p "$pkgdir/usr/bin"
+    ln -s "/opt/ELO-Qt/ELO-NG" "$pkgdir/usr/bin/ELO-Qt"
+    install -Dm644 "icons/Icon.svg" -t "$pkgdir/usr/share/pixmaps/ELO-Qt.svg"
+    install -Dm644 "$srcdir/$pkgname.desktop" -t "$pkgdir/usr/share/applications"
+    install -Dm644 "$srcdir/ckeditor5/ckeditor.js" -t "$pkgdir/opt/ELO-Qt/ckeditor5/"
+    install -Dm644 "$srcdir/ckeditor5/editorSettings.js" -t "$pkgdir/opt/ELO-Qt/ckeditor5/"
+    install -Dm644 "$srcdir/ckeditor5/index.html" -t "$pkgdir/opt/ELO-Qt/ckeditor5/"
+    install -Dm644 "$srcdir/ckeditor5/styles.css" -t "$pkgdir/opt/ELO-Qt/ckeditor5/"
+    install -Dm644 "$srcdir/qtwebengine_dictionaries/de-DE.bdic" -t "$pkgdir/opt/ELO-Qt/qtwebengine_dictionaries/"
+    install -Dm644 "$srcdir/qtwebengine_dictionaries/en-US.bdic" -t "$pkgdir/opt/ELO-Qt/qtwebengine_dictionaries/"
+} 
